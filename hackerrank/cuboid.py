@@ -11,15 +11,4 @@ y = int(raw_input())
 z = int(raw_input())
 n = int(raw_input())
 
-lst = []
-
-for i in range(0,x+1):
-  for j in range(0,y+1):
-    for k in range(0,z+1):
-      lst.append([i, j, k])
-      
-#print lst
-
-out = [l for l in lst if l[0] + l[1] + l[2] != n ]
-
-print out
+print [ l for l in [ [i, j, k] for i in range(x+1) for j in range(y+1) for k in range(z+1) ] if l[0] + l[1] + l[2] != n  ]
